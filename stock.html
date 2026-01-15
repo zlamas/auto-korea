@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="rf-dewi lg:mt-[28px] p-[26px_16px_8px] lg:pb-[26px] text-[18px]/[1]">
+      <div class="max-w-[1600px] flex justify-between items-center m-auto">
+        <img src="/images/logo.webp" alt="" class="w-[263px]">
+
+        <div class="hidden lg:flex gap-[36px] items-center">
+          <a href="stock.html" class="font-extrabold flex gap-[10px] items-center">
+            <span class="size-[10px] shrink-0 bg-(--accent) outline outline-(--accent-dark) rounded-full"></span>
+            <span>В наличии</span>
+          </a>
+          <a href="catalog.html">Каталог</a>
+          <a href="calculator.html">Калькулятор</a>
+          <a href="about.html">О компании</a>
+          <a href="services.html">Услуги</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="#">Контакты</a>
+        </div>
+
+        <div class="hidden lg:flex gap-[52px] items-center">
+          <div class="flex gap-[10px]">
+            <a href="#"><img src="/images/telegram.webp" alt="" class="w-[35px]"></a>
+            <a href="#"><img src="/images/max.webp" alt="" class="w-[35px]"></a>
+          </div>
+
+          <div class="grid gap-[8px] text-right">
+            <a href="#">+7 (481) 284-02-47</a>
+            <div class="text-[14px]">
+              <span class="text-(--dim)">Пн-Вс</span>
+              9:00-21:00
+            </div>
+          </div>
+        </div>
+
+        <button class="lg:hidden">
+          <img src="/images/icon-burger.svg" width="24" alt="">
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-[1580px] mx-auto px-[15px]">
+        <ul class="breadcrumb">
+          <li><a href="index.html">Главная</a></li>
+          <li>Каталог</li>
+        </ul>
+
+        <div class="flex flex-wrap gap-[20px_40px] lg:items-center lg:mt-[80px] mb-[40px]">
+          <div class="flex gap-[10px] items-center">
+            <div class="circle-icon bg-[url(/images/icon-star.svg)] bg-size-[auto_60%] outline-4 size-[34px]"></div>
+            <h1 class="rf-dewi text-[30px] font-bold">
+              Машины в наличии
+            </h1>
+          </div>
+          <div class="text-[14px] text-white/85 tracking-[-0.02em]">
+            В нашем каталоге — проверенные автомобили из Южной Кореи, готовые к заказу. Актуальные цены, детальные описания, фото и видеоотчёты.
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-[1786px] mx-auto bg-(--bg-section) px-[16px] lg:px-[118px] lg:rounded-t-[50px]">
+        <div class="hidden lg:block rounded-full w-[450px] h-[4px] bg-(--accent) mx-auto"></div>
+
+        <div class="flex flex-wrap gap-[10px] py-[26px] lg:py-[32px] text-[14px]/[22px] font-normal text-[#222222]">
+          <label>
+            <input type="radio" name="sort" id="" class="hidden" checked>
+            <span class="radio-label">Все</span>
+          </label>
+          <label>
+            <input type="radio" name="sort" id="" class="hidden">
+            <span class="radio-label">Популярные</span>
+          </label>
+          <label>
+            <input type="radio" name="sort" id="" class="hidden">
+            <span class="radio-label">Сначала новые</span>
+          </label>
+          <label>
+            <input type="radio" name="sort" id="" class="hidden">
+            <span class="radio-label">Цена ↑</span>
+          </label>
+          <label>
+            <input type="radio" name="sort" id="" class="hidden">
+            <span class="radio-label">Цена ↓,</span>
+          </label>
+          <label>
+            <input type="radio" name="sort" id="" class="hidden">
+            <span class="radio-label">Год ↓</span>
+          </label>
+          <label>
+            <input type="radio" name="sort" id="" class="hidden">
+            <span class="radio-label">Пробег ↑</span>
+          </label>
+        </div>
+      </section>
+
+      <button class="button button-accent w-[214px] mx-auto my-[30px] lg:hidden!" data-modal="filter">
+        Фильтровать
+      </button>
+
+      <dialog id="filter" class="size-full p-[40px_16px] rounded-[25px] bg-[#EBF1F6]">
+        <div class="size-full flex flex-col gap-[30px]">
+          <div class="flex justify-between items-center">
+            <h2 class="rf-dewi text-[20px] font-bold">Фильтры</h2>
+            <button data-modal-close>
+              <img src="/images/icon-close.svg" alt="" class="size-[20px]">
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-[20px] flex-1 overflow-y-auto">
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-box select-box">Марка</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">От</span>
+                <span class="field-box select-box">Объем двигателя (cc):</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">До</span>
+                <span class="field-box select-box">Объем двигателя (cc):</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-box select-box">Модель</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">От</span>
+                <span class="field-box select-box">Год</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">До</span>
+                <span class="field-box select-box">Год</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-box select-box">Коробка</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">От</span>
+                <span class="field-box select-box">Пробег:</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">До</span>
+                <span class="field-box select-box">Пробег:</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <button class="button button-accent w-[214px] mx-auto" data-modal-close>
+            Фильтровать
+          </button>
+        </div>
+      </dialog>
+
+      <div class="bg-white text-black pt-[32px] pb-[60px] lg:pb-[90px]">
+        <section class="hidden lg:flex gap-[64px] items-center justify-between max-w-[1548px] bg-[#EBF1F6] mx-auto pl-[40px] pr-[75px] py-[24px] rounded-[25px] mb-[90px]">
+          <div class="grid gap-[20px_64px] grid-cols-[380px_314px_314px] flex-1">
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-box select-box">Марка</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">От</span>
+                <span class="field-box select-box">Объем двигателя (cc):</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">До</span>
+                <span class="field-box select-box">Объем двигателя (cc):</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-box select-box">Модель</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">От</span>
+                <span class="field-box select-box">Год</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">До</span>
+                <span class="field-box select-box">Год</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-box select-box">Коробка</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">От</span>
+                <span class="field-box select-box">Пробег:</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+
+            <details class="field select">
+              <summary class="select-header">
+                <span class="field-unit">До</span>
+                <span class="field-box select-box">Пробег:</span>
+              </summary>
+              <div class="select-body">
+                <label class="field-box flex justify-between items-center m-[10px_7px]">
+                  <input type="text" class="flex-1 outline-0">
+                  <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                </label>
+
+                <div class="grid gap-[10px]">
+                  <div class="option">ASTON MARTIN (16)</div>
+                  <div class="option">AUDI (79)</div>
+                  <div class="option">BENTLEY (32)</div>
+                  <div class="option">BMW (17)</div>
+                  <div class="option">BYD (37)</div>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <button class="button button-accent w-[214px]">
+            Фильтровать
+          </button>
+        </section>
+
+        <section class="grid gap-[50px] lg:gap-[40px_50px] lg:grid-cols-2 max-w-[304px] lg:max-w-[1632px] mx-auto mb-[48px] lg:mb-[80px] px-[16px]">
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-[20px]">
+            <div class="relative rounded-[20px] rounded-tl-none overflow-clip">
+              <img src="/images/catalog-1.webp" alt="" class="min-w-0 h-[230px] object-cover">
+              <div class="hidden lg:block rf-dewi absolute bottom-0 w-full bg-(--button)/30 text-[20px] text-white font-bold px-[16px] pt-[8px] pb-[10px] text-right">
+                + 12 фото
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full">
+              <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
+              <div class="video-container relative flex flex-1">
+                <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="w-[295px] h-[384px] lg:max-w-[140px] lg:h-full rounded-[20px] rounded-tl-none object-cover"></video>
+                <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
+              </div>
+            </div>
+
+            <div class="tracking-[-0.02em]">
+              <div class="grid gap-[30px]">
+                <div class="grid gap-[15px]">
+                  <div class="rf-dewi text-[26px] font-bold">
+                    HYUNDAI CASPER
+                  </div>
+                  <div class="text-[14px]">
+                    1.4 DSG (150 л.с.) FWD
+                  </div>
+                </div>
+
+                <div class="flex gap-[30px]">
+                  <div class="flex gap-[5px] items-center">
+                    <img src="/images/icon-layer-black.svg" alt="" width="18">
+                    <span class="text-[14px]">
+                      Автомат
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-[16px] text-black/25 font-bold">
+                  2025
+                </div>
+              </div>
+
+              <div class="flex gap-[30px] justify-between items-center">
+                <div class="rf-dewi text-[26px] font-bold text-nowrap">
+                  2 417 000 ₽
+                </div>
+                <a href="car-stock.html" class="button button-accent w-[129px]">
+                  Купить
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="flex flex-col lg:flex-row-reverse gap-[32px] items-center justify-between max-w-[1632px] mx-auto px-[16px]">
+          <div class="flex gap-[8px]">
+            <button class="pagination-button" disabled>&lt;</button>
+            <button class="pagination-button active">1</button>
+            <button class="pagination-button">2</button>
+            <button class="pagination-button">3</button>
+            <button class="pagination-button">4</button>
+            <button class="pagination-button">5</button>
+            <button class="pagination-button">&gt;</button>
+          </div>
+          <div class="max-w-[900px] font-[Cygre] text-[14px]/[22px] font-semibold">
+            Наша компания предлагает широкий ассортимент автомобилей различных марок и моделей, что позволяет выбрать подходящий вариант в соответствии с бюджетом и предпочтениями.
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="relative max-w-[1604px] mx-auto pb-[64px]">
+      <div class="absolute inset-x-0 bottom-[100%] rounded-full w-[150px] lg:w-[450px] h-[4px] lg:h-[10px] bg-(--bg) mx-auto"></div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-[290px_1fr_290px] lg:grid-rows-[auto_auto] gap-[40px_8px] mb-[44px] lg:mb-[64px]">
+        <div class="flex lg:flex-col justify-between lg:justify-stretch gap-[30px] col-span-full lg:col-span-1 font-bold px-[16px] lg:pt-[80px] lg:pl-[36px] lg:pr-0 text-nowrap">
+          <div class="rf-dewi text-[20px] lg:text-[22px]">Контакты</div>
+          <div class="grid gap-[7px] lg:gap-[30px]">
+            <div class="rf-dewi text-[25px]">+7 333 211-30-32</div>
+            <div class="rf-dewi text-[18px]">info@сайт.ru</div>
+          </div>
+        </div>
+        <div class="flex lg:flex-col justify-between gap-[30px] col-span-full lg:col-span-1 px-[16px] lg:px-0 lg:pt-[80px]">
+          <div class="rf-dewi text-[20px] lg:text-[22px] font-bold">Офисы</div>
+          <div class="grid gap-[20px] lg:gap-[30px]">
+            <div class="text-[16px] text-white/75 tracking-[-0.02em]">Москва: Новоданиловская наб., 12, БЦ «Даниловский», оф. 12-7</div>
+            <div class="text-[16px] text-white/75 tracking-[-0.02em]">Южная Корея, Инчхон: 172-6 Songdo-dong, Yeonsu-gu (Apt 1603</div>
+          </div>
+        </div>
+        <div class="relative col-span-full -row-1 lg:col-2 lg:row-span-full mb-[-30px] lg:mb-[-120px]">
+          <img src="/images/footer-bg.webp" alt="">
+        </div>
+        <div class="grid gap-[10px] lg:gap-[27px] self-start lg:self-end text-[16px] text-white/75 tracking-[-0.02em] pl-[26px] lg:pl-[36px]">
+          <a href="catalog.html">Каталог</a>
+          <a href="about.html">О компании</a>
+          <a href="services.html">Услуги</a>
+        </div>
+        <div class="grid gap-[10px] lg:gap-[27px] self-start justify-self-end lg:self-end lg:justify-self-auto text-[16px] text-white/75 tracking-[-0.02em] pr-[26px] lg:p-0">
+          <a href="#">Контакты</a>
+          <a href="calculator.html">Калькулятор</a>
+        </div>
+      </div>
+
+      <div class="grid gap-[24px] px-[16px] lg:p-0 text-center font-bold">
+        <div class="h-[194px] rounded-[20px] overflow-hidden" id="map"></div>
+        <a href="#" class="rf-dewi text-[20px] lg:text-[22px] lg:mt-[24px]">Политика конфиденциальности</a>
+        <div class="rf-dewi text-[14px] text-white/60">ИП Имя ФамилияВячеславович, ИНН8410508732 © 2019-2025 ХХХХХХ. Все права защищены.</div>
+      </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=86cb0147-d5b1-4892-ac30-f7ce196228c8&load=package.standard&lang=ru_RU"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

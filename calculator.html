@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <header class="rf-dewi lg:mt-[28px] p-[26px_16px_8px] lg:pb-[26px] text-[18px]/[1]">
+      <div class="max-w-[1600px] flex justify-between items-center m-auto">
+        <img src="/images/logo.webp" alt="" class="w-[263px]">
+
+        <div class="hidden lg:flex gap-[36px] items-center">
+          <a href="stock.html" class="font-extrabold flex gap-[10px] items-center">
+            <span class="size-[10px] shrink-0 bg-(--accent) outline outline-(--accent-dark) rounded-full"></span>
+            <span>В наличии</span>
+          </a>
+          <a href="catalog.html">Каталог</a>
+          <a href="calculator.html">Калькулятор</a>
+          <a href="about.html">О компании</a>
+          <a href="services.html">Услуги</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="#">Контакты</a>
+        </div>
+
+        <div class="hidden lg:flex gap-[52px] items-center">
+          <div class="flex gap-[10px]">
+            <a href="#"><img src="/images/telegram.webp" alt="" class="w-[35px]"></a>
+            <a href="#"><img src="/images/max.webp" alt="" class="w-[35px]"></a>
+          </div>
+
+          <div class="grid gap-[8px] text-right">
+            <a href="#">+7 (481) 284-02-47</a>
+            <div class="text-[14px]">
+              <span class="text-(--dim)">Пн-Вс</span>
+              9:00-21:00
+            </div>
+          </div>
+        </div>
+
+        <button class="lg:hidden">
+          <img src="/images/icon-burger.svg" width="24" alt="">
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-[1580px] mx-auto px-[15px] pb-[40px] lg:pb-[120px]">
+        <ul class="breadcrumb">
+          <li><a href="index.html">Главная</a></li>
+          <li>Калькулятор</li>
+        </ul>
+
+        <div class="flex flex-wrap gap-[20px_40px] justify-between lg:items-center max-w-[945px] lg:mt-[80px] mb-[10px] lg:mb-[40px]">
+          <div class="flex gap-[10px] items-center">
+            <div class="circle-icon bg-[url(/images/icon-star.svg)] bg-size-[auto_60%] outline-4 size-[34px]"></div>
+            <h1 class="rf-dewi text-[30px] font-bold">
+              Рассчитайте лучшую цену на корейский автомобиль
+            </h1>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="bg-white text-black pt-[10px] lg:pt-[40px] pb-[60px] lg:pb-[90px]">
+        <div class="max-w-[1730px] mx-auto mt-[-50px] lg:mt-[-160px]">
+          <section class="grid lg:grid-cols-2 gap-[30px_300px] bg-[#EBF1F6] px-[16px] pt-[40px] lg:pl-[100px] lg:pr-[180px] lg:pt-[60px] rounded-[50px]">
+            <div class="rf-dewi tracking-normal! text-[20px] font-bold lg:mb-[20px] text-center lg:text-left lg:col-span-2">
+              Узнайте точную стоимость с учетом всех акций и специальных предложений для марок Kia, Hyundai, Genesis и других.
+            </div>
+
+            <div class="grid gap-[20px] lg:gap-[40px] lg:pb-[60px]">
+              <div class="flex flex-col lg:flex-row gap-[10px] justify-between items-center">
+                <div>Год выпуска</div>
+                <details class="field select lg:max-w-[270px]">
+                  <summary class="select-header">
+                    <span class="field-box select-box">2025</span>
+                  </summary>
+                  <div class="select-body">
+                    <label class="field-box flex justify-between items-center m-[10px_7px]">
+                      <input type="text" class="flex-1 outline-0">
+                      <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                    </label>
+
+                    <div class="grid gap-[10px]">
+                      <div class="option selected">2025</div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              <div class="flex flex-col lg:flex-row gap-[10px] justify-between items-center">
+                <div>Тип двигателя</div>
+                <details class="field select lg:max-w-[270px]">
+                  <summary class="select-header">
+                    <span class="field-box select-box">Бензин</span>
+                  </summary>
+                  <div class="select-body">
+                    <label class="field-box flex justify-between items-center m-[10px_7px]">
+                      <input type="text" class="flex-1 outline-0">
+                      <img src="/images/icon-search.svg" alt="" class="size-[16px]">
+                    </label>
+
+                    <div class="grid gap-[10px]">
+                      <div class="option selected">Бензин</div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              <label class="flex flex-col lg:flex-row gap-[10px] justify-between items-center">
+                <span>Объем двигателя</span>
+                <span class="field lg:max-w-[270px]">
+                  <input type="number" name="" id="" value="1500" class="field-box">
+                  <span class="field-unit">см</span>
+                </span>
+              </label>
+
+              <label class="flex flex-col lg:flex-row gap-[10px] justify-between items-center">
+                <span>Уточните мощность</span>
+                <span class="field lg:max-w-[270px]">
+                  <input type="number" name="" id="" value="150" class="field-box">
+                  <span class="field-unit">л.с.</span>
+                </span>
+              </label>
+
+              <label class="flex flex-col lg:flex-row gap-[10px] justify-between items-center">
+                <span>Стоимость автомобиля</span>
+                <span class="field lg:max-w-[270px]">
+                  <input type="number" name="" id="" value="1000000" class="field-box">
+                  <span class="field-unit">₩</span>
+                </span>
+              </label>
+
+              <label class="flex items-center gap-[5px] lg:gap-[20px]">
+                <input type="checkbox" name="" id="" class="hidden" checked>
+                <span class="switch">
+                    <span class="switch-knob"></span>
+                  </span>
+                <span>Электро / последовательный гибрид</span>
+              </label>
+
+              <button class="button button-accent w-full" data-modal="calculator">
+                Рассчитать стоимость
+              </button>
+
+              <dialog id="calculator" class="w-full max-w-[640px]! p-[30px_16px] lg:p-[30px] rounded-[25px] bg-white">
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-[10px] items-center">
+                    <div class="circle-icon bg-[url(/images/icon-star.svg)] bg-size-[auto_60%] outline-4 outline-[#D2D2D3]! size-[34px]"></div>
+                    <h2 class="rf-dewi text-[20px] lg:text-[30px] font-bold">
+                      Расчёт стоимости
+                    </h2>
+                  </div>
+                  <button data-modal-close>
+                    <img src="/images/icon-close.svg" alt="" class="size-[20px]">
+                  </button>
+                </div>
+
+                <div class="grid gap-[40px] my-[20px] lg:my-[40px]">
+                  <div class="grid gap-[10px_20px] grid-cols-[auto_1fr] items-center max-w-[323px]">
+                    <div class="tracking-[-0.02em]">Год выпуска:</div>
+                    <div class="text-[14px] font-normal">2025</div>
+
+                    <div class="tracking-[-0.02em]">Тип двигателя:</div>
+                    <div class="text-[14px] font-normal">Бензин</div>
+
+                    <div class="tracking-[-0.02em]">Объем двигателя:</div>
+                    <div class="text-[14px] font-normal">1500</div>
+
+                    <div class="tracking-[-0.02em]">Уточните мощность:</div>
+                    <div class="text-[14px] font-normal">150</div>
+
+                    <div class="tracking-[-0.02em]">Стоимость автомобиля:</div>
+                    <div class="text-[14px] font-normal">1 000 000</div>
+
+                    <div class="col-span-2 tracking-[-0.02em]">Электро / последовательный гибрид</div>
+                  </div>
+
+                  <div class="grid gap-[15px]">
+                    <div class="flex flex-col lg:flex-row gap-[20px] lg:items-center justify-between">
+                      <div class="rf-dewi text-[20px] font-bold">
+                        Стоимость в Корее:
+                      </div>
+                      <div class="font-semibold">
+                        <span class="text-black/60 text-nowrap">68 900 000 ₩</span>
+                        <span class="text-nowrap">/ 3 761 940 ₽</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-[20px] lg:items-center justify-between rf-dewi text-[20px] font-bold">
+                      <div class="flex items-center gap-[20px]">
+                        <img src="/images/flag-kr.webp" alt="" class="w-[40px]">
+                        <div>Расходы в Корее</div>
+                      </div>
+                      <div class="text-(--button) text-nowrap">257 240 ₽</div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-[20px] lg:items-center justify-between rf-dewi text-[20px] font-bold">
+                      <div class="flex items-center gap-[20px]">
+                        <img src="/images/flag-ru.webp" alt="" class="w-[40px]">
+                        <div>Расходы в России:</div>
+                      </div>
+                      <div class="text-(--button) text-nowrap">744 574 ₽</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid gap-[20px]">
+                  <div class="bg-(--bg-section) lg:h-[120px] text-white text-center p-[24px] mx-[-16px] lg:m-0 rounded-t-[50px]">
+                    <div class="text-[14px] tracking-[-0.02em]">
+                      Стоимость
+                    </div>
+                    <div class="rf-dewi text-[40px] lg:text-[50px] font-bold">
+                      4 764 000 ₽
+                    </div>
+                  </div>
+
+                  <div class="rf-dewi text-[16px] text-center tracking-normal! font-bold max-w-[456px] mx-auto">Цена товара без учёта логистики.
+                    <br> Чтобы узнать полную стоимость с доставкой именно до
+                    вашего города, напишите, пожалуйста, менеджеру.</div>
+
+                  <button class="button button-accent w-[306px] mx-auto" data-modal-close>
+                    Написать менеджеру
+                  </button>
+                </div>
+              </dialog>
+            </div>
+
+            <div class="flex flex-col items-center bg-(--bg-section) pt-[25px] lg:pt-[50px] rounded-t-[50px] mx-[24px] lg:m-0">
+              <div class="rf-dewi text-[32px] lg:text-[45px] font-bold text-center text-white">
+                Калькулятор <br> стоимости
+              </div>
+              <img src="/images/calculator-bg-lg.webp" alt="" class="hidden lg:block min-w-[125%] mt-[-20px]">
+              <img src="/images/calculator-bg.webp" alt="" class="lg:hidden min-w-[110%] self-end mt-[20px]">
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="relative max-w-[1604px] mx-auto pb-[64px]">
+      <div class="absolute inset-x-0 bottom-[100%] rounded-full w-[150px] lg:w-[450px] h-[4px] lg:h-[10px] bg-(--bg) mx-auto"></div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-[290px_1fr_290px] lg:grid-rows-[auto_auto] gap-[40px_8px] mb-[44px] lg:mb-[64px]">
+        <div class="flex lg:flex-col justify-between lg:justify-stretch gap-[30px] col-span-full lg:col-span-1 font-bold px-[16px] lg:pt-[80px] lg:pl-[36px] lg:pr-0 text-nowrap">
+          <div class="rf-dewi text-[20px] lg:text-[22px]">Контакты</div>
+          <div class="grid gap-[7px] lg:gap-[30px]">
+            <div class="rf-dewi text-[25px]">+7 333 211-30-32</div>
+            <div class="rf-dewi text-[18px]">info@сайт.ru</div>
+          </div>
+        </div>
+        <div class="flex lg:flex-col justify-between gap-[30px] col-span-full lg:col-span-1 px-[16px] lg:px-0 lg:pt-[80px]">
+          <div class="rf-dewi text-[20px] lg:text-[22px] font-bold">Офисы</div>
+          <div class="grid gap-[20px] lg:gap-[30px]">
+            <div class="text-[16px] text-white/75 tracking-[-0.02em]">Москва: Новоданиловская наб., 12, БЦ «Даниловский», оф. 12-7</div>
+            <div class="text-[16px] text-white/75 tracking-[-0.02em]">Южная Корея, Инчхон: 172-6 Songdo-dong, Yeonsu-gu (Apt 1603</div>
+          </div>
+        </div>
+        <div class="relative col-span-full -row-1 lg:col-2 lg:row-span-full mb-[-30px] lg:mb-[-120px]">
+          <img src="/images/footer-bg.webp" alt="">
+        </div>
+        <div class="grid gap-[10px] lg:gap-[27px] self-start lg:self-end text-[16px] text-white/75 tracking-[-0.02em] pl-[26px] lg:pl-[36px]">
+          <a href="catalog.html">Каталог</a>
+          <a href="about.html">О компании</a>
+          <a href="services.html">Услуги</a>
+        </div>
+        <div class="grid gap-[10px] lg:gap-[27px] self-start justify-self-end lg:self-end lg:justify-self-auto text-[16px] text-white/75 tracking-[-0.02em] pr-[26px] lg:p-0">
+          <a href="#">Контакты</a>
+          <a href="calculator.html">Калькулятор</a>
+        </div>
+      </div>
+
+      <div class="grid gap-[24px] px-[16px] lg:p-0 text-center font-bold">
+        <div class="h-[194px] rounded-[20px] overflow-hidden" id="map"></div>
+        <a href="#" class="rf-dewi text-[20px] lg:text-[22px] lg:mt-[24px]">Политика конфиденциальности</a>
+        <div class="rf-dewi text-[14px] text-white/60">ИП Имя ФамилияВячеславович, ИНН8410508732 © 2019-2025 ХХХХХХ. Все права защищены.</div>
+      </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=86cb0147-d5b1-4892-ac30-f7ce196228c8&load=package.standard&lang=ru_RU"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
