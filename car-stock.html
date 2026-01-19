@@ -76,6 +76,7 @@
               <div class="relative flex items-center mb-[24px]">
                 <button class="gallery-prev absolute left-0 -translate-x-[9px] lg:-translate-x-1/2 size-[45px] bg-white bg-[url(/images/arrow-prev.svg)] bg-center bg-no-repeat rounded-full shadow-[0_4px_4px_#00000026]"></button>
                 <img src="/images/catalog-1.webp" alt="" class="gallery-view rounded-[20px] object-cover">
+                <video class="gallery-video-view w-full rounded-[20px]" controls></video>
                 <button class="gallery-next absolute right-0 translate-x-[9px] lg:translate-x-1/2 size-[45px] bg-white bg-[url(/images/arrow-next.svg)] bg-center bg-no-repeat rounded-full shadow-[0_4px_4px_#00000026]"></button>
               </div>
 
@@ -98,8 +99,8 @@
 
                   <div class="hidden lg:flex flex-col items-center gap-[10px] lg:gap-[14px] lg:pt-[7px] h-full col-4 row-start-1 row-span-2">
                     <div class="rf-dewi text-[18px] font-bold">Видеообзор</div>
-                    <div class="video-container relative flex flex-1">
-                      <video src="/media/demo.mp4" poster="/images/video-thumb.webp" class="rounded-[20px] rounded-tl-none object-cover"></video>
+                    <div class="gallery-video relative flex flex-1" data-src="media/demo.mp4">
+                      <img src="/images/video-thumb.webp" class="rounded-[20px] rounded-tl-none object-cover">
                       <img src="/images/icon-play.svg" alt="" class="video-play absolute inset-0 m-auto size-[75px] lg:size-[36px]">
                     </div>
                   </div>

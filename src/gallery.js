@@ -2,12 +2,23 @@ document.querySelectorAll('.gallery').forEach((gallery) => {
     let selectedIndex = 0;
     let items = gallery.querySelectorAll('.gallery-item');
     let galleryView = gallery.querySelector('.gallery-view');
+    let galleryVideoView = gallery.querySelector('.gallery-video-view');
 
     function updateGallery() {
-        selectedIndex = (selectedIndex + items.length) % items.length;
         gallery.querySelector('.selected')?.classList.remove('selected');
-        items[selectedIndex].classList.add('selected');
-        galleryView.src = items[selectedIndex].src;
+
+        if (selectedIndex !== null) {
+            galleryVideoView.classList.add('hidden');
+            galleryView.classList.remove('hidden');
+
+            selectedIndex = (selectedIndex + items.length) % items.length;
+            items[selectedIndex].classList.add('selected');
+            galleryView.src = items[selectedIndex].src;
+        } else {
+            galleryView.classList.add('hidden');
+            galleryVideoView.classList.remove('hidden');
+            galleryVideoView.play();
+        }
     }
 
     gallery.addEventListener('click', (event) => {
@@ -23,6 +34,13 @@ document.querySelectorAll('.gallery').forEach((gallery) => {
         } else if (event.target.closest('.gallery-more')) {
             items.forEach((item) => item.classList.remove('hidden', 'lg:hidden'));
             event.target.closest('.gallery-more').remove();
+        } else if (
+            event.target.closest('.gallery-video') &&
+            selectedIndex !== null
+        ) {
+            galleryVideoView.src = event.target.closest('.gallery-video').dataset.src;
+            selectedIndex = null;
+            updateGallery();
         }
     });
 
