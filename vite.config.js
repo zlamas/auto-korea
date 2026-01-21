@@ -18,6 +18,7 @@ export default defineConfig({
                 about: 'about.html',
                 reviews: 'reviews.html',
                 services: 'services.html',
+                contact: 'contact.html',
             },
         },
     },
